@@ -9,7 +9,7 @@ jobs:
   pr-integration:
     strategy:
       matrix:
-        os: [windows-latest, ubuntu-latest, macOS-latest]
+        os: [windows-latest, ubuntu-latest] # Disable macOS-latest as no electron build for mac-arm64 exist before v11
     name: ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     steps:
